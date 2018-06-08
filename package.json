@@ -1,0 +1,19 @@
+{
+  "name": "scrapedata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "babyshopstores_links.js",
+  "dependencies": {
+    "encoding": "^0.1.12",
+    "iconv": "^2.3.0",
+    "nightmare": "^3.0.1",
+    "node-fetch": "^2.1.2",
+    "vo": "^4.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ranushka543@gmail.com",
+  "license": "ISC"
+}
