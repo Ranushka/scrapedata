@@ -70,17 +70,18 @@ function* getProductLinks(catLists) {
       .evaluate(function () {
 
         var links = [],
-          productList = document.querySelectorAll('.productslist_item a'),
+          productList = document.querySelectorAll('.productslist_item_link'),
+          tags = document.querySelectorAll('.heading_section')[0].innerText.trim();
           nextExists = document.querySelectorAll('.modern-page-next').length > 0;
 
         // going through each product
         productList.forEach(function (item) {
           links.push({
-            "name": item.querySelectorAll('[class*="ProductBox__productName"]')[0].innerText,
+            "name": item.getElementsByClassName('productslist_item_title')[0].innerText.trim(),
             "url": item.href,
-            "price": item.getElementsByClassName('value')[0].innerText.trim(),
-            "brand": item.querySelectorAll('[class*="ProductBox__brandName"]')[0].innerText.trim(),
-            "site": "noon",
+            "price": item.getElementsByClassName('productslist_item_pricenew')[0].innerText.replace(' AED', ''),
+            "brand": tags,
+            "site": "awok",
           });
         });
 
@@ -103,9 +104,8 @@ function* getProductLinks(catLists) {
     if (nextExists) {
       yield nightmare
         .evaluate(function () {
-          document.querySelectorAll('[class*="Pagination__nextLink"]')[0].click()
-        })
-        .wait(4000);
+          document.querySelectorAll('.modern-page-next')[0].click();
+        });
     }
   }
 
