@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/carrefouruae_products.js"
+            "program": "${workspaceFolder}/gap_links.js"
         }
     ]
 }
