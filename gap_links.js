@@ -12,7 +12,7 @@ const nightmare = Nightmare({
 console.log(`get main links start`);
 
 var aaa = [
-  "hhttps://www.gap.ae/"
+  "https://www.gap.ae/"
 ];
 
 vo(start)(function (err, result) {

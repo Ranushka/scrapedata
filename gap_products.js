@@ -56,12 +56,19 @@ function* getProductLinks(catLists) {
     page = 1,
     allLinks = [];
 
+  yield nightmare.
+  goto(`https://www.gap.ae/`).
+  wait(4000).
+  evaluate(function () {
+    document.cookie = "prod___delivery_type_changed=true";
+  });
+
   while (nextExists) {
 
-    gotoUrl = `${gotoUrl}?p=${page++}`
+    gotoUrl = `https://www.gap.ae/women/?p=${page++}`;
 
     yield nightmare
-      .goto(gotoUrl)
+      .goto(gotoUrl);
 
     // loging scraping site url
     var url = yield nightmare.url();
@@ -88,7 +95,6 @@ function* getProductLinks(catLists) {
             "site": "gap",
           });
         });
-
 
         // return all the values
         return {
