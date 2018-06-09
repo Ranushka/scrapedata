@@ -12,9 +12,7 @@ const nightmare = Nightmare({
 console.log(`get main links start`);
 
 var aaa = [
-  "https://ae.awok.com/education/ds-1131/",
-  "https://ae.awok.com/toys/ds-1128/",
-  "https://ae.awok.com/baby-healthcare/ds-1127/"
+  "https://ae.awok.com/babies-kids-games/ds-1025/"
 ];
 
 vo(start)(function (err, result) {

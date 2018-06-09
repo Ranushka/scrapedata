@@ -105,7 +105,8 @@ function* getProductLinks(catLists) {
       yield nightmare
         .evaluate(function () {
           document.querySelectorAll('.modern-page-next')[0].click();
-        });
+        })
+        .wait(4000);
     }
   }
 
